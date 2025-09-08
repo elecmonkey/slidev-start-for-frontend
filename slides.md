@@ -13,10 +13,10 @@ transition: slide-left
 # enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
 # open graph
-seoMeta:
+# seoMeta:
   # By default, Slidev will use ./og-image.png if it exists,
   # or generate one from the first slide if not found.
-  ogImage: auto
+  # ogImage: auto
   # ogImage: https://cover.sli.dev
 monacoTypesSource: ata
 monacoTypesAdditionalPackages:
