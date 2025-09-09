@@ -40,7 +40,7 @@ monacoRunAdditionalDeps:
 transition: slide-left
 ---
 
-# (1) JavaScript 语言核心特性
+# (1) JavaScript 语言核心
 
 ## 解释执行
 
@@ -49,6 +49,7 @@ transition: slide-left
 - **编译型语言**：C/C++、Go → 编译成机器码 → 执行
 - **解释型语言**：JavaScript → 逐行解释执行
 - 开发快速、跨平台、动态性强 / 执行速度相对较慢
+- **浏览器** 与 **Node.js / Deno / Bun** 都是 JavaScript 的宿主环境
 
 JavaScript 代码直接在浏览器中执行
 
@@ -83,7 +84,7 @@ transition: slide-left
 
 ---
 
-# (1) JavaScript 语言核心特性
+# (1) JavaScript 语言核心
 
 ## 单线程与事件循环
 
@@ -114,10 +115,11 @@ h1 {
 
 ---
 transition: slide-left
-
+layout: two-cols
+layoutClass: gap-10
 ---
 
-# (1) JavaScript 语言核心特性
+# (1) JavaScript 语言核心
 
 ## 任务队列
 
@@ -137,6 +139,31 @@ setTimeout(() => console.log('timeout'), 0);
 Promise.resolve().then(() => console.log('promise'));
 
 console.log('end');
+
+// 运行：xxx
+// 推入??队列
+```
+
+::right::
+
+```mermaid {scale: 0.4}
+flowchart TD
+    A[调用栈 Call Stack] --> B{栈是否为空?}
+    B -->|否| A
+    B -->|是| C[检查微任务队列]
+    C --> D{微任务队列有任务?}
+    D -->|是| E[执行微任务]
+    E --> C
+    D -->|否| F[检查宏任务队列]
+    F --> G{宏任务队列有任务?}
+    G -->|是| H[执行一个宏任务]
+    H --> A
+    G -->|否| I[等待新任务]
+    I --> C
+    
+    style A fill:#ff9999
+    style C fill:#99ccff
+    style F fill:#99ff99
 ```
 
 <style>
@@ -156,7 +183,7 @@ transition: slide-left
 
 ---
 
-# (1) JavaScript 语言核心特性
+# (1) JavaScript 语言核心
 
 ## 异步与Promise
 
@@ -198,7 +225,7 @@ transition: slide-left
 
 ---
 
-# (1) JavaScript 语言核心特性
+# (1) JavaScript 语言核心
 
 ## 弱类型语言
 
@@ -234,7 +261,6 @@ h1 {
 
 ---
 transition: slide-left
-
 ---
 
 # (2) TypeScript 类型系统
@@ -256,7 +282,7 @@ function add(a: number, b: number): number { // 如果删掉 number？
   return a + b;
 }
 
-// add(1, '2'); // ❌ 编译时错误
+// const sum = add(1, '2'); // ❌ 编译时错误
 const result = add(1, 2);   // ✅ 正确
 
 console.log(result);
@@ -1367,6 +1393,8 @@ src/
 
 打包后：
 
+````md magic-move {lines: true}
+
 ```javascript
 (() => {
   // utils.ts
@@ -1384,6 +1412,19 @@ src/
   root.innerHTML = Hello('World');
 })();
 ```
+
+```javascript
+(()=>{var n=(o,r)=>()=>(o&&(r=o(o=0)),r);
+var l=(o,r)=>
+()=>(r||o((r={exports:{}}).exports,r),r.exports);
+function t(o){return`<h1>Hello ${o}</h1>`}
+var e=n(()=>{});
+var m=l(()=>{e();
+var i=document.getElementById("root");
+i.innerHTML=t("World")});
+m();})();
+```
+````
 
 <style>
 h1 {
