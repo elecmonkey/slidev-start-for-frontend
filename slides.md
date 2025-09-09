@@ -1830,6 +1830,120 @@ h1 {
 </style>
 
 ---
+transition: slide-left
+layout: center
+---
+
+# 参与项目
+
+<AgentLogo 
+  image-path="/agent/cursor.png" 
+  name="Cursor" 
+  :position="{ top: 120, left: 90 }" 
+/>
+
+
+<AgentLogo 
+  image-path="/agent/chatgpt.png" 
+  name="ChatGPT" 
+  :position="{ top: 120, right: 120 }" 
+/>
+
+
+<AgentLogo 
+  image-path="/agent/copilot.png" 
+  name="Copilot" 
+  :position="{ top: 250, left: 90 }" 
+/>
+
+
+<AgentLogo 
+  image-path="/agent/codebuddy.png" 
+  name="CodeBuddy" 
+  :position="{ top: 250, left: 180 }" 
+/>
+
+
+<AgentLogo 
+  image-path="/agent/kiro.png" 
+  name="Kiro" 
+  :position="{ top: 380, left: 90 }" 
+/>
+
+
+<AgentLogo 
+  image-path="/agent/lingma.png" 
+  name="Lingma" 
+  :position="{ top: 120, left: 180 }" 
+/>
+
+
+<AgentLogo 
+  image-path="/agent/qoder.png" 
+  name="Qoder" 
+  :position="{ top: 120, left: 270 }" 
+/>
+
+
+<AgentLogo 
+  image-path="/agent/qwen.png" 
+  name="通义千问" 
+  :position="{ top: 120, right: 220 }" 
+/>
+
+<AgentLogo 
+  image-path="/agent/kimi.png" 
+  name="Kimi" 
+  :position="{ top: 250, right: 220 }" 
+/>
+
+<AgentLogo 
+  image-path="/agent/trae.png" 
+  name="Trae" 
+  :position="{ top: 250, left: 270 }" 
+/>
+
+
+<AgentLogo 
+  image-path="/agent/zai.svg" 
+  name="智谱清言" 
+  :position="{ top: 250, right: 120 }" 
+/>
+
+
+<AgentLogo 
+  image-path="/agent/zed.png" 
+  name="Zed" 
+  :position="{ top: 380, left: 180 }" 
+/>
+
+
+<AgentLogo 
+  image-path="/agent/gemini.svg" 
+  name="Gemini-cli" 
+  :position="{ top: 380, right: 120 }" 
+/>
+
+<AgentLogo 
+  image-path="/agent/claude.svg" 
+  name="Claude Code" 
+  :position="{ top: 380, right: 195 }" 
+/>
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 40%, #146b8c 60%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+
+---
 layout: center
 class: text-center
 ---
@@ -1839,7 +1953,7 @@ class: text-center
 https://www.elecmonkey.com/
 
 <div class="pt-6 mb-0 pb-0">
-  {{result}}
+  {{ result }}
 </div>
 
 <div class="pb-6 mt-0 pt-0 text-gray-600">
@@ -1856,6 +1970,10 @@ const parts = new Intl.DateTimeFormat('zh-CN', {
   year: 'numeric',
   month: '2-digit',
   day: '2-digit',
+  // hour: '2-digit',
+  // minute: '2-digit',
+  // second: '2-digit',
+  // hour12: false
 }).formatToParts(new Date());
 
 const get = type => parts.find(p => p.type === type)?.value;
