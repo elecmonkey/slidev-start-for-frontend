@@ -103,6 +103,13 @@ const itemAnim = (i: number) => {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
+  /* Outline + shadow for readability */
+  /* -webkit-text-stroke: 0.6px rgba(0, 0, 0, 0.45); */
+  /* text-stroke: 0.6px rgba(0, 0, 0, 0.45); */
+  paint-order: stroke fill;
+  text-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.15),
+    0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .language-marquee {
@@ -126,6 +133,13 @@ const itemAnim = (i: number) => {
 .word {
   display: inline-block;
   white-space: nowrap;
+  /* Outline + shadow for colored words */
+  -webkit-text-stroke: 0.6px rgba(0, 0, 0, 0.35);
+  text-stroke: 0.6px rgba(0, 0, 0, 0.35);
+  paint-order: stroke fill;
+  text-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.3),
+    0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes fade-up {
