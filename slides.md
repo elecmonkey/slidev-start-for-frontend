@@ -16,7 +16,9 @@ monacoRunAdditionalDeps:
   - dayjs/plugin/timezone
 ---
 
-# Welcome to Front-end
+<!-- # Welcome to Front-end World -->
+
+<TextMarquee />
 
 [Elecmonkey](https://www.elecmonkey.com)
 
@@ -37,12 +39,13 @@ monacoRunAdditionalDeps:
 <style>
 h1 {
   background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 50%, #146b8c 60%);
+  background-image: linear-gradient(-10deg, #4EC5D4 50%, #146b8c 60%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+  font-weight: 500;
 }
 </style>
 
@@ -2106,7 +2109,7 @@ Slides <PoweredBySlidev />
 
 <div class="text-sm">
 
-PPT：[https://start-for-frontend.edev.uno/](https://start-for-frontend.edev.uno/)
+演示文稿：[https://start-for-frontend.edev.uno/](https://start-for-frontend.edev.uno/)
 </div>
 
 <Tech :scattered="false" />
