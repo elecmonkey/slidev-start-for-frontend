@@ -17,6 +17,9 @@ importers:
       '@slidev/theme-seriph':
         specifier: latest
         version: 0.25.0
+      dayjs:
+        specifier: ^1.11.18
+        version: 1.11.18
       vue:
         specifier: ^3.5.18
         version: 3.5.21(typescript@5.9.2)

@@ -1,27 +1,26 @@
 ---
-theme: seriph
+theme: default
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-# background: https://cover.sli.dev
+
 # apply unocss classes to the current slide
 class: text-center
 # https://sli.dev/features/drawing
-drawings:
-  persist: false
 # slide transition: https://sli.dev/guide/animations.html#slide-transitions
 transition: slide-left
 # enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
-# open graph
-# seoMeta:
-  # By default, Slidev will use ./og-image.png if it exists,
-  # or generate one from the first slide if not found.
-  # ogImage: auto
-  # ogImage: https://cover.sli.dev
 monacoTypesSource: ata
 monacoTypesAdditionalPackages:
   - axios
   - zod
+  - dayjs
+  - dayjs/plugin/utc
+  - dayjs/plugin/timezone
+monacoRunAdditionalDeps:
+  - dayjs
+  - dayjs/plugin/utc
+  - dayjs/plugin/timezone
 ---
 
 # Welcome to Front-end
@@ -41,8 +40,27 @@ Herald Studio 2025
   </a>
 </div>
 
+<!-- 装饰性技术栈图标 -->
+<img src="https://images.elecmonkey.com/pages/about/vuejs-original.svg" style="position: absolute; top: 15%; left: 8%; width: 60px; height: 60px; opacity: 0.5; z-index: -1;" />
+<img src="https://images.elecmonkey.com/pages/about/react-original.svg" style="position: absolute; top: 25%; right: 12%; width: 55px; height: 55px; opacity: 0.48; z-index: -1;" />
+<img src="https://images.elecmonkey.com/pages/about/solidjs-original.svg" style="position: absolute; bottom: 30%; left: 15%; width: 50px; height: 50px; opacity: 0.45; z-index: -1;" />
+<img src="https://images.elecmonkey.com/pages/about/svelte-original.svg" style="position: absolute; top: 10%; right: 25%; width: 52px; height: 52px; opacity: 0.47; z-index: -1;" />
+<img src="https://images.elecmonkey.com/pages/about/qwik.svg" style="position: absolute; bottom: 20%; right: 20%; width: 48px; height: 48px; opacity: 0.46; z-index: -1;" />
+<img src="https://images.elecmonkey.com/pages/about/nextjs-original.svg" style="position: absolute; top: 70%; left: 25%; width: 58px; height: 58px; opacity: 0.49; z-index: -1;" />
+<img src="https://images.elecmonkey.com/pages/about/nuxtjs-original.svg" style="position: absolute; top: 35%; left: 5%; width: 53px; height: 53px; opacity: 0.47; z-index: -1;" />
+<img src="https://images.elecmonkey.com/pages/about/angularjs-original.svg" style="position: absolute; bottom: 40%; right: 25%; width: 56px; height: 56px; opacity: 0.44; z-index: -1;" />
+<img src="https://images.elecmonkey.com/pages/about/astro-original.svg" style="position: absolute; top: 20%; left: 25%; width: 54px; height: 54px; opacity: 0.48; z-index: -1;" />
+<img src="https://images.elecmonkey.com/pages/about/nodejs-original.svg" style="position: absolute; bottom: 15%; left: 10%; width: 62px; height: 62px; opacity: 0.5; z-index: -1;" />
+<img src="https://images.elecmonkey.com/pages/about/vitejs-original.svg" style="position: absolute; top: 50%; right: 15%; width: 51px; height: 51px; opacity: 0.47; z-index: -1;" />
+<img src="https://images.elecmonkey.com/pages/about/webpack-original.svg" style="position: absolute; bottom: 35%; left: 30%; width: 49px; height: 49px; opacity: 0.46; z-index: -1;" />
+<img src="https://images.elecmonkey.com/pages/about/esbuild.svg" style="position: absolute; top: 45%; left: 12%; width: 57px; height: 57px; opacity: 0.48; z-index: -1;" />
+<img src="https://vitest.dev/logo.svg" style="position: absolute; bottom: 25%; right: 10%; width: 55px; height: 55px; opacity: 0.49; z-index: -1;" />
+<img src="https://images.elecmonkey.com/pages/about/rollup-original.svg" style="position: absolute; top: 30%; right: 30%; width: 53px; height: 53px; opacity: 0.47; z-index: -1;" />
+<img src="https://images.elecmonkey.com/pages/about/babel-original.svg" style="position: absolute; bottom: 45%; right: 5%; width: 59px; height: 59px; opacity: 0.48; z-index: -1;" />
+<img src="https://images.elecmonkey.com/pages/about/postcss-original.svg" style="position: absolute; top: 55%; left: 8%; width: 52px; height: 52px; opacity: 0.47; z-index: -1;" />
+
 ---
-transition: slide-up
+transition: slide-left
 ---
 
 # (1) JavaScript 语言核心特性
@@ -84,8 +102,8 @@ Here is another comment.
 -->
 
 ---
-transition: slide-up
-level: 2
+transition: slide-left
+
 ---
 
 # (1) JavaScript 语言核心特性
@@ -118,8 +136,8 @@ h1 {
 </style>
 
 ---
-transition: slide-up
-level: 2
+transition: slide-left
+
 ---
 
 # (1) JavaScript 语言核心特性
@@ -157,8 +175,8 @@ h1 {
 </style>
 
 ---
-transition: slide-up
-level: 2
+transition: slide-left
+
 ---
 
 # (1) JavaScript 语言核心特性
@@ -199,8 +217,8 @@ h1 {
 </style>
 
 ---
-transition: slide-up
-level: 2
+transition: slide-left
+
 ---
 
 # (1) JavaScript 语言核心特性
@@ -238,8 +256,8 @@ h1 {
 </style>
 
 ---
-transition: slide-up
-level: 2
+transition: slide-left
+
 ---
 
 # (2) TypeScript 类型系统
@@ -280,8 +298,8 @@ h1 {
 </style>
 
 ---
-transition: slide-up
-level: 2
+transition: slide-left
+
 ---
 
 # (2) TypeScript 类型系统
@@ -325,8 +343,8 @@ h1 {
 </style>
 
 ---
-transition: slide-up
-level: 2
+transition: slide-left
+
 ---
 
 # (2) TypeScript 类型系统
@@ -481,8 +499,8 @@ h1 {
 </style>
 
 ---
-transition: slide-up
-level: 2
+transition: slide-left
+
 ---
 
 # (2) TypeScript 类型系统
@@ -526,7 +544,7 @@ h1 {
 ---
 layout: two-cols
 layoutClass: gap-8
-transition: slide-up
+transition: slide-left
 ---
 
 # (3) 从文档到应用
@@ -583,8 +601,8 @@ h1 {
 </style>
 
 ---
-transition: slide-up
-level: 2
+transition: slide-left
+
 ---
 
 # (3) 从文档到应用
@@ -631,8 +649,8 @@ h1 {
 </style>
 
 ---
-transition: slide-up
-level: 2
+transition: slide-left
+
 ---
 
 # (3) 从文档到应用
@@ -670,8 +688,8 @@ Ajax 技术的诞生催生了全新的前端应用范式 —— HTML 只负责�
 </v-click> -->
 
 ---
-transition: slide-up
-level: 2
+transition: slide-left
+
 ---
 
 # (3) 从文档到应用
@@ -727,8 +745,8 @@ h1 {
 </style>
 
 ---
-transition: slide-up
-level: 2
+transition: slide-left
+
 ---
 
 # (3) 从文档到应用
@@ -776,8 +794,8 @@ hide: false
 ---
 
 ---
-transition: slide-up
-level: 2
+transition: slide-left
+
 ---
 
 # (4) React 框架
@@ -832,7 +850,7 @@ h1 {
 ---
 layout: two-cols
 layoutClass: gap-10
-transition: slide-up
+transition: slide-left
 ---
 
 # (4) React 框架
@@ -882,7 +900,7 @@ h1 {
 </style>
 
 ---
-transition: slide-up
+transition: slide-left
 layout: two-cols
 layoutClass: gap-10
 ---
@@ -948,8 +966,8 @@ h1 {
 </style>
 
 ---
-transition: slide-up
-level: 2
+transition: slide-left
+
 ---
 
 # (4) React 框架
@@ -995,8 +1013,8 @@ h1 {
 </style>
 
 ---
-transition: slide-up
-level: 2
+transition: slide-left
+
 ---
 
 # (4) React 框架
@@ -1038,7 +1056,7 @@ h1 {
 </style>
 
 ---
-transition: slide-up
+transition: slide-left
 layout: two-cols
 layoutClass: gap-10
 ---
@@ -1102,7 +1120,7 @@ h1 {
 </style>
 
 ---
-transition: slide-up
+transition: slide-left
 layout: two-cols
 layoutClass: gap-10
 ---
@@ -1168,7 +1186,7 @@ h1 {
 </style>
 
 ---
-transition: slide-up
+transition: slide-left
 layout: two-cols
 layoutClass: gap-10
 ---
@@ -1243,7 +1261,7 @@ h1 {
 </style>
 
 ---
-transition: slide-up
+transition: slide-left
 layout: image-right
 ---
 
@@ -1276,7 +1294,7 @@ h1 {
 </style>
 
 ---
-transition: slide-up
+transition: slide-left
 layout: two-cols
 layoutClass: gap-10
 ---
@@ -1330,7 +1348,7 @@ h1 {
 </style>
 
 ---
-transition: slide-up
+transition: slide-left
 layout: two-cols
 layoutClass: gap-10
 ---
@@ -1403,7 +1421,7 @@ h1 {
 </style>
 
 ---
-transition: slide-up
+transition: slide-left
 layout: two-cols
 layoutClass: gap-10
 ---
@@ -1468,7 +1486,7 @@ h1 {
 </style>
 
 ---
-transition: slide-up
+transition: slide-left
 layout: two-cols
 layoutClass: gap-10
 ---
@@ -1530,16 +1548,16 @@ h1 {
 </style>
 
 ---
-transition: slide-up
+transition: slide-left
 layout: center
 ---
 
-<div class="pt-10 text-2xl">世界上最重的物品</div>
+<div class="pt-20 text-3xl text-center">世界上最重的物品</div>
 
 ![blackhole](/blackhole.png)
 
 ---
-transition: slide-up
+transition: slide-left
 layout: two-cols
 layoutClass: gap-10
 ---
@@ -1618,12 +1636,12 @@ h1 {
 </style>
 
 ---
-transition: slide-up
+transition: slide-left
 layout: two-cols
 layoutClass: gap-10
 ---
 
-# (5) 项目辅助库
+# (6) 项目辅助库
 
 <div class="py-1"></div>
 
@@ -1709,13 +1727,15 @@ h1 {
 </style>
 
 ---
-transition: slide-up
-level: 2
+transition: slide-left
+
 ---
 
-# (5) 项目辅助库
+# (6) 项目辅助库
 
 ## zod：类型校验 + 类型推导
+
+<div class="py-1"></div>
 
 ```ts {monaco}
 import { z } from 'zod';
@@ -1754,14 +1774,70 @@ h1 {
 </style>
 
 ---
+transition: slide-left
+---
+
+# (7) 一些小问题
+
+## 时区问题
+
+<div class="py-1"></div>
+
+```typescript {monaco-run} {autorun: false}
+import dayjs from 'dayjs';
+
+console.log(dayjs().format('YYYY-MM-DD HH:mm:ss'));
+
+console.log(new Date())
+console.log(new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai', hour12: false }));
+
+const date2 = dayjs(new Date());
+const date3 = dayjs(1640995200000); // 时间戳
+
+console.log(date2, date3);
+```
+
+dayjs？new Date()？new Intl()？无所谓，有时区意识就好。
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
 layout: center
 class: text-center
 ---
 
-# By [Elecmonkey](https://www.elecmonkey.com)
+# By Elecmonkey
 
-<div class="pt-3 pb-8 text-gray-600">
-Herald Studio 2025
+https://www.elecmonkey.com/
+
+<div class="pt-6 mb-0 pb-0">
+  {{result}}
 </div>
 
-<PoweredBySlidev />
+<div class="pb-6 mt-0 pt-0 text-gray-600">
+  Herald Studio
+</div>
+
+Slides <PoweredBySlidev />
+
+<script setup lang="ts">
+const parts = new Intl.DateTimeFormat('zh-CN', {
+  timeZone: 'Asia/Shanghai',
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+}).formatToParts(new Date());
+
+const get = type => parts.find(p => p.type === type)?.value;
+const result = `${get('year')}年${get('month')}月${get('day')}日`;
+</script>
