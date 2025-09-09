@@ -1,14 +1,7 @@
 ---
 theme: default
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-
-# apply unocss classes to the current slide
 class: text-center
-# https://sli.dev/features/drawing
-# slide transition: https://sli.dev/guide/animations.html#slide-transitions
 transition: slide-left
-# enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
 monacoTypesSource: ata
 monacoTypesAdditionalPackages:
@@ -25,7 +18,9 @@ monacoRunAdditionalDeps:
 
 # Welcome to Front-end
 
-Herald Studio 2025
+[Elecmonkey](https://github.com/elecmonkey)
+
+<span class="font-medium">Herald Studio</span>
 
 <div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
   Press Space for next page <carbon:arrow-right />
@@ -40,25 +35,7 @@ Herald Studio 2025
   </a>
 </div>
 
-<!-- 装饰性技术栈图标 -->
-<img src="https://images.elecmonkey.com/pages/about/vuejs-original.svg" style="position: absolute; top: 15%; left: 8%; width: 60px; height: 60px; opacity: 0.5; z-index: -1;" />
-<img src="https://images.elecmonkey.com/pages/about/react-original.svg" style="position: absolute; top: 25%; right: 12%; width: 55px; height: 55px; opacity: 0.48; z-index: -1;" />
-<img src="https://images.elecmonkey.com/pages/about/solidjs-original.svg" style="position: absolute; bottom: 30%; left: 15%; width: 50px; height: 50px; opacity: 0.45; z-index: -1;" />
-<img src="https://images.elecmonkey.com/pages/about/svelte-original.svg" style="position: absolute; top: 10%; right: 25%; width: 52px; height: 52px; opacity: 0.47; z-index: -1;" />
-<img src="https://images.elecmonkey.com/pages/about/qwik.svg" style="position: absolute; bottom: 20%; right: 20%; width: 48px; height: 48px; opacity: 0.46; z-index: -1;" />
-<img src="https://images.elecmonkey.com/pages/about/nextjs-original.svg" style="position: absolute; top: 70%; left: 25%; width: 58px; height: 58px; opacity: 0.49; z-index: -1;" />
-<img src="https://images.elecmonkey.com/pages/about/nuxtjs-original.svg" style="position: absolute; top: 35%; left: 5%; width: 53px; height: 53px; opacity: 0.47; z-index: -1;" />
-<img src="https://images.elecmonkey.com/pages/about/angularjs-original.svg" style="position: absolute; bottom: 40%; right: 25%; width: 56px; height: 56px; opacity: 0.44; z-index: -1;" />
-<img src="https://images.elecmonkey.com/pages/about/astro-original.svg" style="position: absolute; top: 20%; left: 25%; width: 54px; height: 54px; opacity: 0.48; z-index: -1;" />
-<img src="https://images.elecmonkey.com/pages/about/nodejs-original.svg" style="position: absolute; bottom: 15%; left: 10%; width: 62px; height: 62px; opacity: 0.5; z-index: -1;" />
-<img src="https://images.elecmonkey.com/pages/about/vitejs-original.svg" style="position: absolute; top: 50%; right: 15%; width: 51px; height: 51px; opacity: 0.47; z-index: -1;" />
-<img src="https://images.elecmonkey.com/pages/about/webpack-original.svg" style="position: absolute; bottom: 35%; left: 30%; width: 49px; height: 49px; opacity: 0.46; z-index: -1;" />
-<img src="https://images.elecmonkey.com/pages/about/esbuild.svg" style="position: absolute; top: 45%; left: 12%; width: 57px; height: 57px; opacity: 0.48; z-index: -1;" />
-<img src="https://vitest.dev/logo.svg" style="position: absolute; bottom: 25%; right: 10%; width: 55px; height: 55px; opacity: 0.49; z-index: -1;" />
-<img src="https://images.elecmonkey.com/pages/about/rollup-original.svg" style="position: absolute; top: 30%; right: 30%; width: 53px; height: 53px; opacity: 0.47; z-index: -1;" />
-<img src="https://images.elecmonkey.com/pages/about/babel-original.svg" style="position: absolute; bottom: 45%; right: 5%; width: 59px; height: 59px; opacity: 0.48; z-index: -1;" />
-<img src="https://images.elecmonkey.com/pages/about/postcss-original.svg" style="position: absolute; top: 55%; left: 8%; width: 52px; height: 52px; opacity: 0.47; z-index: -1;" />
-
+<Tech :scattered="true" />
 ---
 transition: slide-left
 ---
@@ -1575,24 +1552,24 @@ layoutClass: gap-10
 <div class="py-1"></div>
 
 ```bash
-# 安装依赖
 npm install react
 pnpm add react
 
-npm install -D typescript  # 开发依赖
+npm install -D typescript
 pnpm add -D typescript
 
-# 安装所有依赖
 npm i
 pnpm i
 
-# 运行脚本
 npm run dev
 pnpm dev
 
 npm run build
 pnpm build
 ```
+
+ - https://github.com/vuejs/core
+ - https://github.com/facebook/react
 
 ::right::
 
@@ -1829,6 +1806,8 @@ https://www.elecmonkey.com/
 </div>
 
 Slides <PoweredBySlidev />
+
+<Tech :scattered="false" />
 
 <script setup lang="ts">
 const parts = new Intl.DateTimeFormat('zh-CN', {
