@@ -18,7 +18,7 @@ monacoRunAdditionalDeps:
 
 # Welcome to Front-end
 
-[Elecmonkey](https://github.com/elecmonkey)
+[Elecmonkey](https://www.elecmonkey.com)
 
 <span class="font-medium">Herald Studio</span>
 
@@ -27,15 +27,25 @@ monacoRunAdditionalDeps:
 </div>
 
 <div class="abs-br m-6 text-xl">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="slidev-icon-btn">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" class="slidev-icon-btn">
+  <a href="https://github.com/elecmonkey/slidev-start-for-frontend" target="_blank" class="slidev-icon-btn">
     <carbon:logo-github />
   </a>
 </div>
 
 <Tech :scattered="true" />
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 50%, #146b8c 60%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
 ---
 transition: slide-left
 ---
@@ -605,12 +615,11 @@ h1 {
 
 ---
 transition: slide-left
-
 ---
 
 # (3) 从文档到应用
 
-## JavaScript 操作 DOM
+## JavaScript 操作 DOM / CSSOM
 
 <div>
 
@@ -1265,6 +1274,132 @@ h1 {
 
 ---
 transition: slide-left
+layout: two-cols
+layoutClass: gap-10
+---
+
+# (4) 开发工具
+
+<div class="py-1"></div>
+
+## Git
+
+<div class="py-1"></div>
+
+### Git 仓库的四个区域
+
+<div class="py-1"></div>
+
+ - **工作区**：你正在编辑的文件所在的目录
+ - **暂存区**：临时存放即将提交的文件变更
+ - **本地仓库**：存储项目完整历史的本地数据库
+ - **远程仓库**：托管在服务器上的代码仓库
+
+<div class="py-1"></div>
+
+```bash
+# 工作区 → 暂存区
+git add filename.js
+
+# 暂存区 → 本地仓库
+git commit -m "提交信息"
+
+# 本地仓库 → 远程仓库
+git push origin main
+```
+
+::right::
+
+<div class="w-60 -translate-y-5">
+
+![git](/git-01.png)
+
+</div>
+
+<div class="w-60 -translate-y-5">
+
+![git](/git-02.png)
+
+</div>
+
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+transition: slide-left
+layout: two-cols
+layoutClass: gap-10
+---
+
+# (4) 开发工具
+
+<div class="py-1"></div>
+
+## Git
+
+<div class="py-1"></div>
+
+### .git 文件夹
+
+所有工作区以外的本地文件其实在这里 <span>:-)</span>
+
+### .gitignore 文件
+
+告诉 Git 应该忽略哪些文件或文件夹，即不将这些文件纳入版本控制。
+
+所有安装的依赖 `node_modules`、构建产物 `build`/`target`、日志文件、由代码产生的文件，都应该进 `.gitignore` ！
+
+`.gitignore` 文件本身应该进 Git 仓库管理。
+
+::right::
+
+<div class="py-6"></div>
+
+### Github 与 Gitlab
+
+<div class="py-1"></div>
+
+#### Issues
+- 讨论区
+<div class="py-1"></div>
+
+#### Pull Request
+- “合并请求”
+
+<div class="py-1"></div>
+
+### Gitlab CI/CD / Github Actions
+
+CI - Continuous Integration
+
+CD - Continuous Deployment
+
+每次向 main 分支的提交，自动检查代码质量（`lint`、`type-check`）、运行测试、部署到测试服务器，甚至于生产服务器。
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+transition: slide-left
 layout: image-right
 ---
 
@@ -1834,7 +1969,9 @@ transition: slide-left
 layout: center
 ---
 
-# 参与项目
+# 用好工具
+
+Vibe Coding 也是软件工程师的武器
 
 <AgentLogo 
   image-path="/agent/cursor.png" 
@@ -1845,8 +1982,8 @@ layout: center
 
 <AgentLogo 
   image-path="/agent/chatgpt.png" 
-  name="ChatGPT" 
-  :position="{ top: 120, right: 120 }" 
+  name="ChatGPT Codex" 
+  :position="{ top: 120, right: 71 }" 
 />
 
 
@@ -1888,13 +2025,13 @@ layout: center
 <AgentLogo 
   image-path="/agent/qwen.png" 
   name="通义千问" 
-  :position="{ top: 120, right: 220 }" 
+  :position="{ top: 120, right: 210 }" 
 />
 
 <AgentLogo 
   image-path="/agent/kimi.png" 
   name="Kimi" 
-  :position="{ top: 250, right: 220 }" 
+  :position="{ top: 250, right: 210 }" 
 />
 
 <AgentLogo 
@@ -1907,7 +2044,7 @@ layout: center
 <AgentLogo 
   image-path="/agent/zai.svg" 
   name="智谱清言" 
-  :position="{ top: 250, right: 120 }" 
+  :position="{ top: 250, right: 110 }" 
 />
 
 
@@ -1917,23 +2054,29 @@ layout: center
   :position="{ top: 380, left: 180 }" 
 />
 
+<AgentLogo 
+  image-path="/agent/cline.svg" 
+  name="Cline" 
+  :position="{ top: 380, left: 270 }" 
+/>
+
 
 <AgentLogo 
   image-path="/agent/gemini.svg" 
   name="Gemini-cli" 
-  :position="{ top: 380, right: 120 }" 
+  :position="{ top: 380, right: 110 }" 
 />
 
 <AgentLogo 
   image-path="/agent/claude.svg" 
   name="Claude Code" 
-  :position="{ top: 380, right: 195 }" 
+  :position="{ top: 380, right: 185 }" 
 />
 
 <style>
 h1 {
   background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 40%, #146b8c 60%);
+  background-image: linear-gradient(45deg, #4EC5D4 20%, #146b8c 60%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -1941,7 +2084,6 @@ h1 {
   -moz-text-fill-color: transparent;
 }
 </style>
-
 
 ---
 layout: center
@@ -1961,6 +2103,11 @@ https://www.elecmonkey.com/
 </div>
 
 Slides <PoweredBySlidev />
+
+<div class="text-sm">
+
+PPT：[https://start-for-frontend.edev.uno/](https://start-for-frontend.edev.uno/)
+</div>
 
 <Tech :scattered="false" />
 
