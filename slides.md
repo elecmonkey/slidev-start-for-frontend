@@ -1442,6 +1442,78 @@ layoutClass: gap-10
 
 # (5) 前端工程化
 
+## 模块化
+
+<div class="py-2"></div>
+
+### CommonJS (CJS)
+
+CommonJS 是 Node.js 默认的模块系统，采用同步加载方式。
+
+```javascript 
+// 导出模块
+module.exports = {
+  functionA,
+  variableB
+};
+
+// 或者使用 exports
+exports.functionA = functionA;
+
+// 导入模块
+const moduleA = require('./moduleA');
+const { functionA } = require('./moduleA');
+```
+
+
+::right::
+
+### ECMAScript Modules (ESM)
+
+ESM 是 JavaScript 的官方标准模块系统，同时支持浏览器和 Node.js 环境。
+
+```javascript
+// 导出模块
+export function functionA() { /* ... */ }
+export const variableB = 'value';
+
+// 或者默认导出
+export default { functionA, variableB };
+
+// 导入模块
+import moduleA from './moduleA.js';
+import { functionA } from './moduleA.js';
+```
+
+在浏览器中使用 ESM
+
+```javascript
+<script type="module">
+  import { functionA } from './module.js';
+  // 使用导入的函数
+</script>
+```
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+transition: slide-left
+layout: two-cols
+layoutClass: gap-10
+---
+
+# (5) 前端工程化
+
 ## 为什么要有构建工具
 
 <div class="py-1"></div>
@@ -1451,10 +1523,12 @@ layoutClass: gap-10
   - 在实践中，我们通常认为 ESM 模块化的项目打包也会带来好处。
 - **新语法**: TypeScript、JSX需要编译
 - **性能优化**: 代码压缩、Tree Shaking
-  - All to ESM！
+  - https://antfu.me/posts/move-on-to-esm-only
 - **开发体验**: 热更新、错误提示
 
 ::right::
+
+<div class="py-6"></div>
 
 以下代码我们经常写，可是它们真的能被浏览器直接运行吗？
 
@@ -1475,6 +1549,10 @@ let num: number = 10;
 ```
 
  - 浏览器不支持将 TypeScript。
+
+<div class="translate-y-5">Why do we still need bundlers?</div>
+
+https://rolldown.rs/guide/in-depth/why-bundlers
 
 <style>
 h1 {
@@ -1676,6 +1754,8 @@ npx vite build
 - 代码分割、懒加载
 
 ::right::
+
+<div class="py-7"></div>
 
 ### 为什么 Tree-Shaking 需要 ESM？
 
